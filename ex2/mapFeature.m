@@ -11,6 +11,9 @@ function out = mapFeature(X1, X2)
 %
 
 degree = 6;
+% And the degree was set to 6 by the authors of this exercise because it worked well 
+% enough for the lesson they were teaching. 
+% You can experiment with different values.
 out = ones(size(X1(:,1)));
 for i = 1:degree
     for j = 0:i
