@@ -44,6 +44,9 @@ else
     z = z'; % important to transpose z before calling contour
 
     % Plot z = 0
+    % since z = theta*X
+    % if z is sigmoid(theta*X), then should plot z=0.5
+    
     % Notice you need to specify the range [0, 0]
     contour(u, v, z, [0, 0], 'LineWidth', 2)
 end
