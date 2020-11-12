@@ -18,11 +18,12 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
   J = 1/m * sum( -y.*log(sigmoid(X*theta)) - (1-y).*log(1-sigmoid(X*theta)) );
-  theta(1,1) = 0; 
-  % Note that you should not regularize the parameter theta0, so set theta0 to be 0 
-  J = J + 1/(2*m)*lambda*sum(theta.^2);
+  grad = 1/m * ( X'*(sigmoid(X*theta)-y) );
 
-  grad = 1/m * ( X'*(sigmoid(X*theta)-y) ) + 1/m * lambda*theta;
+  % Note that you should not regularize the parameter theta0, so set theta0 to be 0 
+  theta(1,1) = 0; 
+  J = J + 1/(2*m)*lambda*sum(theta.^2);
+  grad = grad + 1/m * lambda*theta;
 
 % =============================================================
 
