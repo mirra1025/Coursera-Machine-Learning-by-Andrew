@@ -29,7 +29,7 @@ else
     % Here is the grid range
     u = linspace(-1, 1.5, 50);
     v = linspace(-1, 1.5, 50);
-    % Those values cover the range of X values for this exercise.
+    % Those values(-1 and 1.5) cover the range of X values for this exercise.
     % In my copy of the function, I've replaced those lines with this, so it works for any set of data:
     % u = linspace(min(X(:,2)), max(X(:,2)), 50);
     % v = linspace(min(X(:,3)), max(X(:,2)), 50);
