@@ -40,7 +40,7 @@ grad = zeros(size(theta));
     grad = 1/m * ( X'*(sigmoid(X*theta)-y) );
 
     % Note that you should not regularize the parameter theta0, so set theta0 to be 0 
-    theta(1,1) = 0; 
+    theta(1) = 0; 
     J = J + 1/(2*m)*lambda*sum(theta.^2);
     grad = grad + 1/m * lambda*theta;
 
