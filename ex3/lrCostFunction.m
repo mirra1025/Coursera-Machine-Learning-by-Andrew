@@ -46,6 +46,6 @@ grad = zeros(size(theta));
 
 % =============================================================
 
-grad = grad(:);
+grad = grad(:); % returns column vector
 
 end
